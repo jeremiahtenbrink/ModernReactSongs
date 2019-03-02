@@ -1,9 +1,24 @@
 import React from "react";
+import SongList from "./SongList";
+import { Container, Grid } from "semantic-ui-react";
+
 import PropTypes from "prop-types";
+import SongDetail from "./SongDetail";
 
 const App = ( props ) => {
     return (
-        <div>App</div>
+        <Container>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={ 6 }>
+                        <SongList />
+                    </Grid.Column>
+                    <Grid.Column width={ 10 }>
+                        <SongDetail />
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </Container>
     );
 };
 
